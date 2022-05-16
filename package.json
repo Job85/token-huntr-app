@@ -54,9 +54,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Job85/token_huntr_client/issues"
-  },
-  "homepage": "https://github.com/Job85/token_huntr_client#readme"
+  "license": "ISC"
 }

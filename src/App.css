@@ -48,7 +48,7 @@
 .nav-anchor {
   display: block;
   width: 150px;
-  color: #000;
+  color: rgb(201, 106, 106);
   text-decoration: none;
   text-align: center;
   border-bottom: 1px solid #FF8C00;
@@ -57,7 +57,7 @@
 .nav-anchor-end {
   display: block;
   width: 150px;
-  color: #000;
+  color: rgb(195, 246, 122);
   text-decoration: none;
 }
 

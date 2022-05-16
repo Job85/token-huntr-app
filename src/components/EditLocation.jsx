@@ -36,7 +36,7 @@ const EditForm = () => {
     }
 
     const UpdateCache = async () => {
-        let url = process.env.NODE_ENV === `http://localhost:3001/api/location/update_cache/${location_id}`
+        let url = `http://localhost:3001/api/location/update_cache/${location_id}`
         await axios.put({
             url,
             method: 'put',
@@ -77,7 +77,7 @@ const EditForm = () => {
                                     placeholder={formValues.latitude}
                                     name='latitude'
                                     onChange={handleChange}
-                                    // onChange={(e) => { setLatitude(e.target.value) }}
+
                                     required
                                 />
                             </span>
@@ -89,7 +89,6 @@ const EditForm = () => {
                                     placeholder={formValues.longitude}
                                     name='longitude'
                                     onChange={handleChange}
-                                    // onChange={(e) => { setLongitude(e.target.value) }}
                                     required
                                 />
                             </span>
@@ -100,7 +99,6 @@ const EditForm = () => {
                                     value={formValues.level}
                                     name='level'
                                     onChange={handleChange}
-                                // onChange={(e) => { setLevel(e.target.value) }}
                                 >
                                     <option value="easy">Easy</option>
                                     <option value="moderate">Moderate</option>
@@ -112,7 +110,6 @@ const EditForm = () => {
                             <button>Save</button>
                         </div>
                     </form>
-                    {/* <DeleteLocation location_id={location_id} /> */}
                 </div>
                 <div onClick={() => handleDelete(location_id)}>
                     <button id="deleteButton" type="submit">Delete Cache</button>

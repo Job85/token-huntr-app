@@ -8,3 +8,27 @@
     margin: 15px;
     display: inline-block;
 }
+
+.nav-anchor {
+    display: block;
+    width: 150px;
+    color: rgb(201, 106, 106);
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #FF8C00;
+}
+
+.nav-anchor-end {
+    display: block;
+    width: 150px;
+    color: rgb(195, 246, 122);
+    text-decoration: none;
+}
+
+.nav-anchor .active {
+    color: coral;
+}
+
+.nav-anchor-end .active {
+    color: coral;
+}

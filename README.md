@@ -1,11 +1,25 @@
-# token_huntr
-Become the Jack Sparrow of Geocaching! Track down and discover the exact location of a geocache to earn valuable tokens. Some tokens are worth more depending on their level of difficulty in finding.
+## Date: 5.16.2022
+
+### by Julian Jernigan:
+
+[Linkedin](https://www.linkedin.com/in/julian-jernigan813/)
+[GitHub](https://github.com/Job85)
+---
+## *Description*
+An app where you can hunt down geocahche locations. If you're new to the scene geocaching is a coordinates based adventure. You're given coordinates to a location and within 150 feet you will find a cache, a weather proof container of some sort, of various sizes. Inside the sealed cache, typically, are trincates or knick knacks that can be swapped out. With Token Huntr though, you will be able to collect tradeable Tokens. And in the near future we look to add **Crypto Tokens**.
 
 ## Technology Used
 - ** Postresql
 - ** Express
 - ** React
 - ** Node
+
+# App Preview
+[CacheCreator](./assets/CacheCreator.png)
+
+[LandingPage](./assets/LandingPage.jpeg)
+
+[LocationsList](./assets/LocationsList.png)
 
 ## Diagrams
 [CHD](./backend/assets/token_chd.png)
@@ -18,7 +32,12 @@ Become the Jack Sparrow of Geocaching! Track down and discover the exact locatio
 ### Links
 [Token_Huntr]( https://token-huntr.herokuapp.com)
 
-[Linkedin Profile](https://www.linkedin.com/in/julian-jernigan813/)
 
 ## Future Updates
-- Implement QR codes for Token verification
+- Wallet features to store GeoCache Tokens
+-Crypto Tokens
+
+
+## Known bugs
+Coordinates can have text in them
+No redirection after creating a location

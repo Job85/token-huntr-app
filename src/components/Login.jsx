@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import { Redirect } from 'react-router-dom';
 import { LogInUser } from '../services/AuthServices'
 import { useNavigate } from "react-router-dom";
-// import { login } from "../actions/auth";
 
 const LogIn = (props) => {
     let navigate = useNavigate()
