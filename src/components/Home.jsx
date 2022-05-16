@@ -7,7 +7,7 @@ const Home = () => {
                 Welcome to New Adventures
             </h1>
             <h3>
-                <Link to={'/locations'}> Onward to New Heights</Link>
+                <Link className='link' to={'/locations'}> Onward to New Heights</Link>
             </h3>
         </div>
     )
