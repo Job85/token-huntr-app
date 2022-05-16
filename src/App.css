@@ -14,12 +14,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #02550c;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -32,7 +32,46 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #FF8C00;
+}
+
+.nav-anchor {
+  display: block;
+  width: 150px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 1px solid #FF8C00;
+}
+
+.nav-anchor-end {
+  display: block;
+  width: 150px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-anchor:hover {
+  background-color: chartreuse;
+  color: mintcream
+}
+
+.nav-anchor-end:hover {
+  background-color: chartreuse;
+  color: mintcream
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
 }
