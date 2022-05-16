@@ -1,0 +1,10 @@
+.location-card {
+    border: 2px solid rgb(37, 103, 9);
+    padding-bottom: 50px;
+}
+
+.location-span {
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+}
