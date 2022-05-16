@@ -1,107 +1,43 @@
-import React, { useState } from 'react';
-import axios from 'axios'
-// import { useParams } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom'
-// import LocationReducer from '../store/reducers/LocationReducer';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-
-const LocationForm = ({ user }) => {
-    // let navigate = useNavigate()
-    // let { user_id } = useParams()
-    const user_id = user.id
-    // console.log(user_id)
-    const [formValues, setFormValues] = useState({
-        latitude: '',
-        longitude: '',
-        level: ''
-    })
-
-    const handleChange = (e) => {
-        // console.log(formValues)
-        setFormValues({ ...formValues, [e.target.name]: e.target.value })
-    }
-
-    const CreateCache = async () => {
-        // let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api//location/create_cache/${user_id}` : `https://token-huntr-app.herokuapp.com/api//location/create_cache/${user_id}`
-        let url = process.env.NODE_ENV === `http://localhost:3001/api/location/create_cache/${user_id}`
-        await axios({
-            url,
-            method: 'post',
-            data: formValues
-        })
-    }
-
-    const handleSubmit = async (e) => {
-        console.log('button clicked')
-        e.preventDefault()
-        CreateCache()
-        setFormValues({
-            latitude: '',
-            longitude: '',
-            level: ''
-        })
-        axios.post(`http://localhost:3001/api/location/create_cache/${user_id}`, formValues)
-        // return newLocation
-        // navigate('/locations'),
-        // window.location.reload(false)
-    }
+const LocationList = () => {
+    const [location, setLocations] = useState([])
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    useEffect(() => {
+        const GetLocations = async () => {
+            await sleep(1000);
+            const location = await axios.get(`http://localhost:3001/api/location`)
+            setLocations(location.data)
+            console.log(location.data)
+        }
+        GetLocations()
+            .catch(console.error)
+    }, [])
 
     return (
-        <div className='local-form'>
-            <h2>Add a New Geocache</h2>
-            <h4>Fill out form below!</h4>
-            <form onSubmit={handleSubmit}>
-                <ul>
-                    <ul>
-                        <label>Latitude:</label>
-                        <input type='text'
-                            placeholder={'Latitude'}
-                            name='latitude'
-                            value={formValues.latitude}
-                            onChange={handleChange}
-                            required
-                        />
-                    </ul>
-                    <ul>
-                        <label>Longitude:</label>
-                        <input type='text'
-                            placeholder={'Longitude'}
-                            name='longitude'
-                            value={formValues.longitude}
-                            onChange={handleChange}
-                        />
-                    </ul>
-                    <ul>
-                        <label>Level:</label>
-                        {/* <input
-                            name='level'
-                            value={formValues.level}
-                            onChange={handleChange}
-                        /> */}
-                        <select
-                            name='level'
-                            id='selectLvl'
-                            value={formValues.level}
-                            onChange={handleChange}
-                        >
-                            <option value="easy">Easy</option>
-                            <option value="moderate">Moderate</option>
-                            <option value="hard">Hard</option>
-                        </select>
-                    </ul>
-                    <button
-                        disabled={
-                            !formValues.latitude ||
-                            !formValues.longitude
-                            // !formValues.level
-                        }
-                    >
-                        Add Cache
-                    </button>
-                </ul>
-            </form>
+        <div>
+            <h1>GeoCache Locations</h1>
+            <div>
+                {location.map((cache, i) => (
+                    <li className='location-card' key={i}>
+                        <span className='location-span'>
+                            Coordinates: {cache.latitude},{cache.longitude}
+                        </span>
+                        <span className='location-span'>
+                            Difficulty Level: {cache.level}
+                        </span>
+                        <Link to={`/locations/${cache.id}`} key={cache.id}>
+                            <button>
+                                Edit Location
+                            </button>
+                        </Link>
+                    </li>
+                ))}
+            </div>
         </div>
     )
 }
 
-export default LocationForm
+export default LocationList
