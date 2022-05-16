@@ -16,13 +16,9 @@ Become the Jack Sparrow of Geocaching! Track down and discover the exact locatio
 [Token Trello](https://trello.com/b/uCrbG9pF/token-huntr-app)
 
 ### Links
-[Deployed App Link ** coming soon]()
+[Token_Huntr]( https://token-huntr.herokuapp.com)
 
 [Linkedin Profile](https://www.linkedin.com/in/julian-jernigan813/)
-
-[Mapbox Link for Post MVP](https://docs.mapbox.com/api/overview/)
-
-[authoO Link for Post MVP](https://auth0.com/)
 
 ## Future Updates
 - Implement QR codes for Token verification

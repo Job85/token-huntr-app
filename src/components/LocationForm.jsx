@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-// import { useParams } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom'
-// import LocationReducer from '../store/reducers/LocationReducer';
 
 
 const LocationForm = ({ user }) => {
@@ -73,11 +71,6 @@ const LocationForm = ({ user }) => {
                     </ul>
                     <ul>
                         <label>Level:</label>
-                        {/* <input
-                            name='level'
-                            value={formValues.level}
-                            onChange={handleChange}
-                        /> */}
                         <select
                             name='level'
                             id='selectLvl'
@@ -93,7 +86,6 @@ const LocationForm = ({ user }) => {
                         disabled={
                             !formValues.latitude ||
                             !formValues.longitude
-                            // !formValues.level
                         }
                     >
                         Add Cache

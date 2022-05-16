@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { isEmail } from 'validator';
 import { RegisterUser } from '../services/AuthServices';
 import { useNavigate } from 'react-router-dom';
-// import { register } from '../store/actions/AuthActions';
 
 const required = value => {
     if (!value) {
@@ -53,23 +52,23 @@ const Register = () => {
     const handleSubmit = async (e) => {
         console.log('button clicked')
         e.preventDefault()
-        // try {
-        await RegisterUser({
-            firstName: formValues.firstName,
-            lastName: formValues.lastName,
-            email: formValues.email,
-            password: formValues.password
-        })
-        setFormValues({
-            firstName: '',
-            lastName: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
-        })
-        // } catch (error) {
-        //     throw error
-        // }
+        try {
+            await RegisterUser({
+                firstName: formValues.firstName,
+                lastName: formValues.lastName,
+                email: formValues.email,
+                password: formValues.password
+            })
+            setFormValues({
+                firstName: '',
+                lastName: '',
+                email: '',
+                password: '',
+                confirmPassword: ''
+            })
+        } catch (error) {
+            throw error
+        }
 
         navigate('/login')
     }
