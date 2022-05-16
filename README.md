@@ -22,9 +22,9 @@ An app where you can hunt down geocahche locations. If you're new to the scene g
 [LocationsList](./assets/LocationsList.png)
 
 ## Diagrams
-[CHD](./backend/assets/token_chd.png)
+[CHD](/assets/CHD.jpeg)
 
-[ERD](./backend/assets/token_erd.png)
+[ERD](/assets/ERD.jpeg)
 
 ## App Work Flow
 [Token Trello](https://trello.com/b/uCrbG9pF/token-huntr-app)

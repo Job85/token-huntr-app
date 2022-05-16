@@ -49,35 +49,35 @@ const App = () => {
           handleLogOut={handleLogOut}
         />
       </header>
-      <div style={{
-        backgroundImage: `url(https://www.theinteriorgallery.com/prod_images_blowup/treasurechest-02.jpg)`,
-        backgroundAttachment: 'fixed'
-      }}>
-        <h1>
-          Token Huntr
-        </h1>
-        <div>
-          <Routes>
-            <Route path='/' element={<Landing />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login
-              // setId={userId}
-              setUser={setUser}
-              toggleAuthenticated={toggleAuthenticated} />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/locations' element={<LocationList
-              user={user}
-              authenticated={authenticated}
-            />} />
-            <Route path='/locations/create/:user_id' element={<LocationForm
-              user={user}
-              authenticated={authenticated}
-            />} />
-            <Route path={`/locations/:location_id`} element={<EditCache
-              user={user}
-              authenticated={authenticated}
-            />} />
-          </Routes>
+      <h1>
+        Token Huntr
+      </h1>
+      <div>
+        <Routes>
+          <Route path='/' element={<Landing />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login
+            // setId={userId}
+            setUser={setUser}
+            toggleAuthenticated={toggleAuthenticated} />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/locations' element={<LocationList
+            user={user}
+            authenticated={authenticated}
+          />} />
+          <Route path='/locations/create/:user_id' element={<LocationForm
+            user={user}
+            authenticated={authenticated}
+          />} />
+          <Route path={`/locations/:location_id`} element={<EditCache
+            user={user}
+            authenticated={authenticated}
+          />} />
+        </Routes>
+        <div style={{
+          backgroundImage: `url(https://www.theinteriorgallery.com/prod_images_blowup/treasurechest-02.jpg)`,
+          backgroundAttachment: 'fixed'
+        }}>
         </div>
       </div >
     </div>
