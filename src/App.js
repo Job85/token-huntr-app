@@ -74,13 +74,8 @@ const App = () => {
             authenticated={authenticated}
           />} />
         </Routes>
-        <div style={{
-          backgroundImage: `url(https://www.theinteriorgallery.com/prod_images_blowup/treasurechest-02.jpg)`,
-          backgroundAttachment: 'fixed'
-        }}>
-        </div>
-      </div >
-    </div>
+      </div>
+    </div >
   );
 }
 
