@@ -39,3 +39,7 @@
 .active {
   color: mintcream;
 }
+
+.landing-button {
+  margin: 1rem;
+}
