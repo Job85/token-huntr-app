@@ -56,12 +56,12 @@ const EditForm = () => {
         })
         axios.put(`http://localhost:3001/api/location/update_cache/${location_id}`, formValues)
         navigate('/locations');
-        window.refresh.reload(false)
     }
 
     const handleDelete = async (id) => {
         console.log('button clicked')
         await axios.delete(`http://localhost:3001/api/location/delete_cache/${location_id}`)
+        navigate('/locations');
     }
 
 
