@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 // useLocation, useNavigate
 
 
 
 const EditForm = () => {
+
+    let navigate = useNavigate()
 
     const [formValues, setFormValues] = useState({
         latitude: '',
@@ -53,8 +55,8 @@ const EditForm = () => {
             level: ''
         })
         axios.put(`http://localhost:3001/api/location/update_cache/${location_id}`, formValues)
-        // navigate('/locations');
-        // window.refresh.reload(false)
+        navigate('/locations');
+        window.refresh.reload(false)
     }
 
     const handleDelete = async (id) => {
