@@ -52,10 +52,17 @@ const LogIn = (props) => {
                             required
                         />
                     </div>
-                    <button type='submit' disabled={!formValues.email || !formValues.password}>
+                    <button
+                        className='landing-button'
+                        type='submit'
+                        disabled={!formValues.email || !formValues.password}
+                    >
                         Log In
                     </button>
-                    <button onClick={() => navigate('/register')}>
+                    <button
+                        className='landing-button'
+                        onClick={() => navigate('/register')}
+                    >
                         Account Needed. Sign up here!
                     </button>
                 </form>
