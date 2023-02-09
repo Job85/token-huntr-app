@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './CompStyle.css';
 
 const LocationList = () => {
     const [location, setLocations] = useState([])
@@ -21,7 +22,7 @@ const LocationList = () => {
             <h1>GeoCache Locations</h1>
             <div>
                 {location.map((cache, i) => (
-                    <li className='location-card' key={i}>
+                    <div className='location-card' key={i}>
                         <span className='location-span'>
                             Coordinates: {cache.latitude},{cache.longitude}
                         </span>
@@ -33,7 +34,7 @@ const LocationList = () => {
                                 Edit Location
                             </button>
                         </Link>
-                    </li>
+                    </div>
                 ))}
             </div>
         </div>
