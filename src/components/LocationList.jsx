@@ -20,14 +20,17 @@ const LocationList = () => {
     return (
         <div>
             <h1>GeoCache Locations</h1>
-            <div>
+            <div className='card-container'>
                 {location.map((cache, i) => (
                     <div className='location-card' key={i}>
                         <span className='location-span'>
-                            Coordinates: {cache.latitude},{cache.longitude}
+                            <b>Latitude:</b> {cache.latitude}
+                        </span>
+                        <span>
+                            <b>Longitude:</b> {cache.longitude}
                         </span>
                         <span className='location-span'>
-                            Difficulty Level: {cache.level}
+                            <b>Difficulty Level:</b> {cache.level}
                         </span>
                         <Link to={`/locations/${cache.id}`} key={cache.id}>
                             <button>
