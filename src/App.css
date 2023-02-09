@@ -7,54 +7,35 @@
   min-height: 25vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.nav-bar {
+.navbar {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  border: 2px solid #FF8C00;
+  padding-bottom: 2rem;
 }
 
 .nav-anchor {
-  display: block;
-  width: 150px;
-  color: rgb(201, 106, 106);
-  text-decoration: none;
-  text-align: center;
-  border-bottom: 1px solid #FF8C00;
+  color: rgb(74, 207, 33);
+  font-size: x-large;
+}
+
+.nav-anchor-start {
+  padding-right: 1.5rem;
 }
 
 .nav-anchor-end {
-  display: block;
-  width: 150px;
-  color: rgb(195, 246, 122);
-  text-decoration: none;
+  padding-left: 1.5rem;
 }
 
-.nav-anchor:hover {
-  background-color: chartreuse;
-  color: mintcream
-}
-
-.nav-anchor-end:hover {
-  background-color: chartreuse;
-  color: mintcream
+.nav-icon:hover {
+  color: chartreuse
 }
 
 .active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.link {
-  color: beige;
+  color: mintcream;
 }

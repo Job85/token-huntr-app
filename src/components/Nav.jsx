@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faCompass, faHouseChimneyUser, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 const Nav = ({ user }) => {
     return (
         <nav className='navbar'>
-            <Link to='/' ><FontAwesomeIcon icon={faHouseChimneyUser} /></Link>
-            {/* <Link to='/wallet'>My Wallet</Link> */}
-            <Link to='/locations'><FontAwesomeIcon icon={faLocationCrosshairs} /> <FontAwesomeIcon icon={faCompass} /></Link>
-            <Link to={`/locations/create/${user?.id}`}><FontAwesomeIcon icon={faCirclePlus} /></Link>
-            {/* <Link to='/rules'>Rules</Link> */}
+            <NavLink to='/' className='nav-anchor nav-anchor-start'><FontAwesomeIcon icon={faHouseChimneyUser} className='nav-icon' /></NavLink>
+            {/* <NavLink to='/wallet'>My Wallet</NavLink> */}
+            <NavLink to='/locations' className='nav-anchor'><FontAwesomeIcon icon={faLocationCrosshairs} className='nav-icon' /> <FontAwesomeIcon icon={faCompass} className='nav-icon' /></NavLink>
+            <NavLink to={`/locations/create/${user?.id}`} className='nav-anchor nav-anchor-end'><FontAwesomeIcon icon={faCirclePlus} className='nav-icon' /></NavLink>
+            {/* <NavLink to='/rules'>Rules</NavLink> */}
         </nav>
     )
 }
