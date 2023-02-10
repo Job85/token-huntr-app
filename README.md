@@ -43,5 +43,9 @@ Coordinates can have text in them
 No redirection after creating a location
 
 ## Acknowlegments
-Photo by <a href="https://unsplash.com/@camdicecca?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cam DiCecca</a> on <a href="https://unsplash.com/s/photos/explore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Map Photo by <a href="https://unsplash.com/@camdicecca?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cam DiCecca</a> on <a href="https://unsplash.com/s/photos/explore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Compass Photo by <a href="https://unsplash.com/@jamie452?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jamie Street</a> on <a href="https://unsplash.com/s/photos/compass?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+Mountain Tops Photo by <a href="https://unsplash.com/es/@sickle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sergey Pesterev</a> on <a href="https://unsplash.com/s/photos/explore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
