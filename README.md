@@ -41,3 +41,7 @@ An app where you can hunt down geocahche locations. If you're new to the scene g
 ## Known bugs
 Coordinates can have text in them
 No redirection after creating a location
+
+## Acknowlegments
+Photo by <a href="https://unsplash.com/@camdicecca?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cam DiCecca</a> on <a href="https://unsplash.com/s/photos/explore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
