@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import './CompStyle.css';
 
-const LocationList = () => {
+const Card = () => {
     const [location, setLocations] = useState([])
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     useEffect(() => {
@@ -19,7 +19,6 @@ const LocationList = () => {
 
     return (
         <div>
-            <h1>GeoCache Locations</h1>
             <div className='card-container'>
                 {location.map((cache, i) => (
                     <div className='location-card' key={i}>
@@ -44,4 +43,4 @@ const LocationList = () => {
     )
 }
 
-export default LocationList
+export default Card
