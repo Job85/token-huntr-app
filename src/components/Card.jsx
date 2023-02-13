@@ -32,7 +32,7 @@ const Card = () => {
                             <b>Difficulty Level:</b> {cache.level}
                         </span>
                         <Link to={`/locations/${cache.id}`} key={cache.id}>
-                            <button>
+                            <button className="card-button">
                                 Edit Location
                             </button>
                         </Link>
