@@ -6,3 +6,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+.lp-background {
+    background-attachment: fixed;
+    background-color: gray;
+    background-image: url("../assets/mountain-tops.jpg");
+    background-position: center;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

@@ -5,7 +5,7 @@ const Landing = () => {
     let navigate = useNavigate()
 
     return (
-        <div>
+        <div className='lp-background'>
             <section>
                 <h1>Welcome to Token Huntr</h1>
                 <h2>Log In or Sign Up for New Adventures</h2>
