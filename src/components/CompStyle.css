@@ -26,3 +26,30 @@
     color: #7ea8b4;
     font-weight: bold;
 }
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.nav-anchor {
+    color: rgb(74, 207, 33);
+    font-size: x-large;
+}
+
+.nav-anchor-start {
+    padding-right: 1.5rem;
+}
+
+.nav-anchor-end {
+    padding-left: 1.5rem;
+}
+
+.nav-icon:hover {
+    color: chartreuse
+}
+
+.active {
+    color: mintcream;
+}
