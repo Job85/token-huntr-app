@@ -7,13 +7,13 @@
 .location-card {
     width: 30%;
     padding: 2rem;
-    border: 2px solid #a54417;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #7ea8b4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: #815e4c;
-    color: #7ea8b4;
+    background-color: #12343b;
+    color: #e1b382;
 }
 
 .location-span {
@@ -22,8 +22,8 @@
 }
 
 .card-button {
-    background-color: #df5421;
-    color: #7ea8b4;
+    background-color: #e1b382;
+    color: #12343b;
     font-weight: bold;
 }
 
