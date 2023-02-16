@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { LogInUser } from '../services/AuthServices'
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const LogIn = (props) => {
     let navigate = useNavigate()
@@ -32,26 +34,30 @@ const LogIn = (props) => {
             <div className="card-overlay">
                 <form className="form" onSubmit={handleLogin}>
                     <div className="input-wrapper">
-                        {/* <label htmlFor="email">Email</label> */}
-                        <input
-                            onChange={handleChange}
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={formValues.email}
-                            required
-                        />
+                        <label htmlFor="email">
+                            <FontAwesomeIcon icon={faEnvelope} className='icon' />
+                            <input
+                                onChange={handleChange}
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={formValues.email}
+                                required
+                            />
+                        </label>
                     </div>
                     <div className="input-wrapper">
-                        {/* <label htmlFor="password">Password</label> */}
-                        <input
-                            onChange={handleChange}
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={formValues.password}
-                            required
-                        />
+                        <label htmlFor="password">
+                            <FontAwesomeIcon icon={faLock} className='icon' />
+                            <input
+                                onChange={handleChange}
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={formValues.password}
+                                required
+                            />
+                        </label>
                     </div>
                     <button
                         className='landing-button'

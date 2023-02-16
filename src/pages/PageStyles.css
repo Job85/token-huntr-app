@@ -60,3 +60,7 @@ input[type=password] {
     display: flex;
     flex-direction: column;
 }
+
+.icon {
+    padding-right: .2rem;
+}
