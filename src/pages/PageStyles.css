@@ -56,11 +56,26 @@ input[type=password] {
 }
 
 .login {
-    align-items: left;
-    display: flex;
-    flex-direction: column;
+    background-color: grey;
+    padding-top: 2rem;
 }
 
 .icon {
     padding-right: .2rem;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer a {
+    color: #12343b;
+}
+
+@media screen and (max-width: 555px) {
+
+    .input {
+        font-size: 10px;
+    }
 }

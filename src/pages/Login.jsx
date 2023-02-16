@@ -30,49 +30,56 @@ const LogIn = (props) => {
     }
 
     return (
-        <div className="container">
-            <div className="card-overlay">
-                <form className="form" onSubmit={handleLogin}>
-                    <div className="input-wrapper">
-                        <label htmlFor="email">
-                            <FontAwesomeIcon icon={faEnvelope} className='icon' />
-                            <input
-                                onChange={handleChange}
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formValues.email}
-                                required
-                            />
-                        </label>
-                    </div>
-                    <div className="input-wrapper">
-                        <label htmlFor="password">
-                            <FontAwesomeIcon icon={faLock} className='icon' />
-                            <input
-                                onChange={handleChange}
-                                type="password"
-                                name="password"
-                                placeholder="Password"
-                                value={formValues.password}
-                                required
-                            />
-                        </label>
-                    </div>
-                    <button
-                        className='landing-button'
-                        type='submit'
-                        disabled={!formValues.email || !formValues.password}
-                    >
-                        Log In
-                    </button>
-                    <button
-                        className='landing-button'
-                        onClick={() => navigate('/register')}
-                    >
-                        Account Needed. Sign up here!
-                    </button>
-                </form>
+        <div className="login">
+            <div className="container">
+                <div className="card-overlay">
+                    <h2>LOGIN</h2>
+                    <form className="form" onSubmit={handleLogin}>
+                        <div className="input-wrapper">
+                            <label htmlFor="email">
+                                <FontAwesomeIcon icon={faEnvelope} className='icon' />
+                                <input
+                                    className="input"
+                                    onChange={handleChange}
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    value={formValues.email}
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="input-wrapper">
+                            <label htmlFor="password">
+                                <FontAwesomeIcon icon={faLock} className='icon' />
+                                <input
+                                    className="input"
+                                    onChange={handleChange}
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={formValues.password}
+                                    required
+                                />
+                            </label>
+                        </div>
+                        <div className="card-footer">
+                            <button
+                                className='landing-button'
+                                type='submit'
+                                disabled={!formValues.email || !formValues.password}
+                            >
+                                Log In
+                            </button>
+                            <a
+                                href="/register"
+                                className='register-anchor'
+                            >
+                                Need Account? Sign Up Here!
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     )
