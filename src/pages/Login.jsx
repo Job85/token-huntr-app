@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { LogInUser } from '../services/AuthServices'
+import { LogInUser } from '../services/AuthServices';
+import LoginBG from "../components/LoginBackground";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -31,6 +32,8 @@ const LogIn = (props) => {
 
     return (
         <div className="login">
+            {/* <LoginBG /> */}
+            <div className="sphere"></div>
             <div className="container">
                 <div className="card-overlay">
                     <h2>LOGIN</h2>
@@ -81,7 +84,7 @@ const LogIn = (props) => {
                     </form>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

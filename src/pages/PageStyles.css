@@ -25,6 +25,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .card-overlay {
@@ -56,8 +58,11 @@ input[type=password] {
 }
 
 .login {
+    /* padding-top: 2rem; */
+    position: relative;
+    /* z-index: 0; */
+    /* height: 100vh; */
     background-color: grey;
-    padding-top: 2rem;
 }
 
 .icon {
@@ -78,4 +83,11 @@ input[type=password] {
     .input {
         font-size: 10px;
     }
+}
+
+.loginBG {
+    background-color: gray;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
 }

@@ -53,3 +53,20 @@
 .active {
     color: mintcream;
 }
+
+.loginBG {
+    background-color: grey;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sphere {
+    border-radius: 50%;
+    width: 35vw;
+    height: 35vh;
+    background-color: #2d545e;
+}
