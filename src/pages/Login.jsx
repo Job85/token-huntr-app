@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { LogInUser } from '../services/AuthServices';
-import LoginBG from "../components/LoginBackground";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Button } from "../components/CompStyles";
 
 const LogIn = (props) => {
     let navigate = useNavigate()
@@ -67,13 +67,12 @@ const LogIn = (props) => {
                             </label>
                         </div>
                         <div className="card-footer">
-                            <button
-                                className='landing-button'
-                                type='submit'
+                            <Button
+                                type="submit"
                                 disabled={!formValues.email || !formValues.password}
                             >
-                                Log In
-                            </button>
+                                Login
+                            </Button>
                             <a
                                 href="/register"
                                 className='register-anchor'
