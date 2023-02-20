@@ -7,7 +7,6 @@
     background-size: cover;
 }
 
-
 .lp-background {
     background-attachment: fixed;
     background-color: gray;
@@ -19,75 +18,7 @@
     height: 100vh;
 }
 
-.container {
-    /* background-color: gray; */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-}
-
-.card-overlay {
-    border-radius: 2rem;
-    width: 30%;
-    padding: 2rem;
-    border: 2px solid #7ea8b4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 1rem;
-    flex-direction: column;
-    background-color: #e1b382;
-    color: #12343b;
-}
-
-.input-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input[type=email],
-input[type=password] {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    color: black;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
 .login {
-    /* padding-top: 2rem; */
     position: relative;
-    /* z-index: 0; */
-    /* height: 100vh; */
     background-color: grey;
-}
-
-.icon {
-    padding-right: .2rem;
-}
-
-.card-footer {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-footer a {
-    color: #12343b;
-}
-
-@media screen and (max-width: 555px) {
-
-    .input {
-        font-size: 10px;
-    }
-}
-
-.loginBG {
-    background-color: gray;
-    background-size: cover;
-    z-index: 0;
-    position: relative;
 }

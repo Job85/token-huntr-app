@@ -3,7 +3,9 @@ import { LogInUser } from '../services/AuthServices';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Button } from "../components/CompStyles";
+// import { Button, CardWapper, CardBody, CardHeader, CardHeading, CardFieldset, CardInput, CardWrapper } from "../components/CompStyles";
+import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
+import { Card } from "@mui/material";
 
 const LogIn = (props) => {
     let navigate = useNavigate()
@@ -31,59 +33,52 @@ const LogIn = (props) => {
     }
 
     return (
+
         <div className="login">
-            {/* <LoginBG /> */}
-            <div className="sphere"></div>
-            <div className="container">
-                <div className="card-overlay">
-                    <h2>LOGIN</h2>
-                    <form className="form" onSubmit={handleLogin}>
-                        <div className="input-wrapper">
-                            <label htmlFor="email">
-                                <FontAwesomeIcon icon={faEnvelope} className='icon' />
-                                <input
-                                    className="input"
-                                    onChange={handleChange}
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email"
-                                    value={formValues.email}
-                                    required
-                                />
-                            </label>
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="password">
-                                <FontAwesomeIcon icon={faLock} className='icon' />
-                                <input
-                                    className="input"
-                                    onChange={handleChange}
-                                    type="password"
-                                    name="password"
-                                    placeholder="Password"
-                                    value={formValues.password}
-                                    required
-                                />
-                            </label>
-                        </div>
-                        <div className="card-footer">
-                            <Button
+            <CardContainer>
+                <CardOverlay>
+                    <CardHeader>Log In</CardHeader>
+                    <form onSubmit={handleLogin}>
+                        <InputWrapper>
+                            <Icon icon={faEnvelope} />
+                            <CardInput
+                                onChange={handleChange}
+                                type='email'
+                                name='email'
+                                placeholder="Email"
+                                value={formValues.email}
+                                required
+                            />
+                        </InputWrapper>
+                        <InputWrapper>
+                            <Icon icon={faLock} />
+                            <CardInput
+                                onChange={handleChange}
+                                type='password'
+                                name='password'
+                                placeholder="Password"
+                                value={formValues.password}
+                                required
+                            />
+                        </InputWrapper>
+                        <CardFooter>
+                            <CardButton
                                 type="submit"
                                 disabled={!formValues.email || !formValues.password}
                             >
                                 Login
-                            </Button>
+                            </CardButton>
                             <a
                                 href="/register"
                                 className='register-anchor'
                             >
                                 Need Account? Sign Up Here!
                             </a>
-                        </div>
+                        </CardFooter>
                     </form>
-                </div>
-            </div>
-        </div >
+                </CardOverlay>
+            </CardContainer>
+        </div>
     )
 }
 
