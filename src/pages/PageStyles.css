@@ -22,3 +22,12 @@
     position: relative;
     background-color: grey;
 }
+
+.label {
+    display: flex;
+    padding-right: .5rem;
+}
+
+.edit {
+    justify-content: end;
+}

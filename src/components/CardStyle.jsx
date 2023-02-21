@@ -20,8 +20,8 @@ export const CardOverlay = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
     flex-direction: column;
-    background-color: #2963a2;
-    color: #72c2c9;
+    background-color: #12343b;
+    color: #e1b382;
 `
 
 export const CardHeader = styled.h2`
@@ -63,8 +63,8 @@ export const CardFooter = styled.div`
 `
 
 export const CardButton = styled.button`
-    background: #72c2c9;
-    color: #2963a2;
+    background: #e1b382;
+    color: #12343b;
     border-radius: .5rem;
     width: 45%;
     font-weight: 900;
