@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { isEmail } from 'validator';
 import { RegisterUser } from '../services/AuthServices';
 import { useNavigate } from 'react-router-dom';
+import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
+import "./PageStyles.css";
 
 const required = value => {
     if (!value) {
@@ -74,78 +77,140 @@ const Register = () => {
     }
 
     return (
-        <div className='login col'>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <div className='form-group'>
-                        <label htmlFor='username'>First Name</label>
-                        <input
+        <CardContainer>
+            <CardOverlay>
+                <CardHeader>Sign Up for Account</CardHeader>
+                <form onSubmit={handleSubmit}>
+                    <InputWrapper className="edit">
+                        <label htmlFor='firstName'>First Name</label>
+                        <CardInput
+                            onChange={handleChange}
                             type='text'
                             name='firstName'
-                            placeholder='Joe'
+                            placeholder="John"
                             value={formValues.firstName}
-                            onChange={handleChange}
-                            validations={[required]}
+                            required
                         />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor='username'>Last Name</label>
-                        <input
+                    </InputWrapper>
+                    <InputWrapper className="edit">
+                        <label htmlFor='lastName'>Last Name</label>
+                        <CardInput
+                            onChange={handleChange}
                             type='text'
                             name='lastName'
-                            placeholder='Schmoe'
+                            placeholder="Doe"
                             value={formValues.lastName}
-                            onChange={handleChange}
-                            validations={[required]}
+                            required
                         />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="text"
-                            placeholder='example@email.com'
-                            name="email"
-                            value={formValues.email}
+                    </InputWrapper>
+                    <InputWrapper className="edit">
+                        <Icon icon={faEnvelope} />
+                        <CardInput
                             onChange={handleChange}
+                            type="email"
+                            name='email'
+                            placeholder="Email"
+                            value={formValues.email}
                             validations={[required, validEmail]}
                         />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder='password'
+                    </InputWrapper>
+                    <InputWrapper className="edit">
+                        <Icon icon={faLock} />
+                        <CardInput
+                            onChange={handleChange}
+                            type='password'
+                            name='password'
+                            placeholder="Password"
                             value={formValues.password}
-                            onChange={handleChange}
-                            validations={[required, validPassword]}
+                            required
                         />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="confirmPassword">Confirm Password</label>
-                        <input
+                    </InputWrapper>
+                    <InputWrapper className="edit">
+                        <CardInput
                             onChange={handleChange}
-                            type="password"
-                            name="confirmPassword"
+                            type='password'
+                            name='confirmPassword'
+                            placeholder="Confirm Password"
                             value={formValues.confirmPassword}
-                            validations={[required]}
+                            required
                         />
-                    </div>
-                </div>
-                <button
-                    type='submit'
-                    disabled={
-                        !formValues.firstName ||
-                        !formValues.lastName ||
-                        !formValues.email ||
-                        (!formValues.password &&
-                            formValues.confirmPassword === formValues.password)
-                    }
-                >
-                    Register
-                </button>
-            </form>
-        </div>
+                    </InputWrapper>
+                </form>
+            </CardOverlay>
+        </CardContainer>
+
+        // <div className='login col'>
+        //     <form onSubmit={handleSubmit}>
+        //         <div>
+        //             <div className='form-group'>
+        //                 <label htmlFor='username'>First Name</label>
+        //                 <input
+        //                     type='text'
+        //                     name='firstName'
+        //                     placeholder='Joe'
+        //                     value={formValues.firstName}
+        //                     onChange={handleChange}
+        //                     validations={[required]}
+        //                 />
+        //             </div>
+        //             <div className="form-group">
+        //                 <label htmlFor='username'>Last Name</label>
+        //                 <input
+        //                     type='text'
+        //                     name='lastName'
+        //                     placeholder='Schmoe'
+        //                     value={formValues.lastName}
+        //                     onChange={handleChange}
+        //                     validations={[required]}
+        //                 />
+        //             </div>
+        //             <div className="form-group">
+        //                 <label htmlFor="email">Email</label>
+        //                 <input
+        //                     type="text"
+        //                     placeholder='example@email.com'
+        //                     name="email"
+        //                     value={formValues.email}
+        //                     onChange={handleChange}
+        //                     validations={[required, validEmail]}
+        //                 />
+        //             </div>
+        //             <div className="form-group">
+        //                 <label htmlFor="password">Password</label>
+        //                 <input
+        //                     type="password"
+        //                     name="password"
+        //                     placeholder='password'
+        //                     value={formValues.password}
+        //                     onChange={handleChange}
+        //                     validations={[required, validPassword]}
+        //                 />
+        //             </div>
+        //             <div className="form-group">
+        //                 <label htmlFor="confirmPassword">Confirm Password</label>
+        //                 <input
+        //                     onChange={handleChange}
+        //                     type="password"
+        //                     name="confirmPassword"
+        //                     value={formValues.confirmPassword}
+        //                     validations={[required]}
+        //                 />
+        //             </div>
+        //         </div>
+        //         <button
+        //             type='submit'
+        //             disabled={
+        //                 !formValues.firstName ||
+        //                 !formValues.lastName ||
+        //                 !formValues.email ||
+        //                 (!formValues.password &&
+        //                     formValues.confirmPassword === formValues.password)
+        //             }
+        //         >
+        //             Register
+        //         </button>
+        //     </form>
+        // </div>
     )
 
 }
