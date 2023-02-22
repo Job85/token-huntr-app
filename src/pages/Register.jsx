@@ -135,82 +135,21 @@ const Register = () => {
                             required
                         />
                     </InputWrapper>
+                    <CardButton
+                        type='submit'
+                        disabled={
+                            !formValues.firstName ||
+                            !formValues.lastName ||
+                            !formValues.email ||
+                            (!formValues.password &&
+                                formValues.confirmPassword === formValues.password)
+                        }
+                    >
+                        Register
+                    </CardButton>
                 </form>
             </CardOverlay>
         </CardContainer>
-
-        // <div className='login col'>
-        //     <form onSubmit={handleSubmit}>
-        //         <div>
-        //             <div className='form-group'>
-        //                 <label htmlFor='username'>First Name</label>
-        //                 <input
-        //                     type='text'
-        //                     name='firstName'
-        //                     placeholder='Joe'
-        //                     value={formValues.firstName}
-        //                     onChange={handleChange}
-        //                     validations={[required]}
-        //                 />
-        //             </div>
-        //             <div className="form-group">
-        //                 <label htmlFor='username'>Last Name</label>
-        //                 <input
-        //                     type='text'
-        //                     name='lastName'
-        //                     placeholder='Schmoe'
-        //                     value={formValues.lastName}
-        //                     onChange={handleChange}
-        //                     validations={[required]}
-        //                 />
-        //             </div>
-        //             <div className="form-group">
-        //                 <label htmlFor="email">Email</label>
-        //                 <input
-        //                     type="text"
-        //                     placeholder='example@email.com'
-        //                     name="email"
-        //                     value={formValues.email}
-        //                     onChange={handleChange}
-        //                     validations={[required, validEmail]}
-        //                 />
-        //             </div>
-        //             <div className="form-group">
-        //                 <label htmlFor="password">Password</label>
-        //                 <input
-        //                     type="password"
-        //                     name="password"
-        //                     placeholder='password'
-        //                     value={formValues.password}
-        //                     onChange={handleChange}
-        //                     validations={[required, validPassword]}
-        //                 />
-        //             </div>
-        //             <div className="form-group">
-        //                 <label htmlFor="confirmPassword">Confirm Password</label>
-        //                 <input
-        //                     onChange={handleChange}
-        //                     type="password"
-        //                     name="confirmPassword"
-        //                     value={formValues.confirmPassword}
-        //                     validations={[required]}
-        //                 />
-        //             </div>
-        //         </div>
-        //         <button
-        //             type='submit'
-        //             disabled={
-        //                 !formValues.firstName ||
-        //                 !formValues.lastName ||
-        //                 !formValues.email ||
-        //                 (!formValues.password &&
-        //                     formValues.confirmPassword === formValues.password)
-        //             }
-        //         >
-        //             Register
-        //         </button>
-        //     </form>
-        // </div>
     )
 
 }
