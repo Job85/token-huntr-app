@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-// import { useNavigate } from 'react-router-dom'
+import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
+import { useNavigate } from 'react-router-dom'
 
 
 const LocationForm = ({ user }) => {
     const user_id = user.id
+    let navigate = useNavigate()
+
     const [formValues, setFormValues] = useState({
         latitude: '',
         longitude: '',
@@ -35,56 +38,67 @@ const LocationForm = ({ user }) => {
             level: ''
         })
         axios.post(`http://localhost:3001/api/location/create_cache/${user_id}`, formValues)
+        navigate('/locations');
     }
 
     return (
-        <div className='local-form'>
-            <h2>Add a New Geocache</h2>
-            <h4>Fill out form below!</h4>
-            <form onSubmit={handleSubmit}>
-                <ul>
-                    <ul>
-                        <label>Latitude:</label>
-                        <input type='text'
-                            placeholder={'Latitude'}
-                            name='latitude'
-                            value={formValues.latitude}
-                            onChange={handleChange}
-                            required
-                        />
-                    </ul>
-                    <ul>
-                        <label>Longitude:</label>
-                        <input type='text'
-                            placeholder={'Longitude'}
-                            name='longitude'
-                            value={formValues.longitude}
-                            onChange={handleChange}
-                        />
-                    </ul>
-                    <ul>
-                        <label>Level:</label>
-                        <select
-                            name='level'
-                            id='selectLvl'
-                            value={formValues.level}
-                            onChange={handleChange}
+        <div>
+            <CardContainer>
+                <CardOverlay>
+                    <CardHeader>Create Cache Location</CardHeader>
+                    <form onSubmit={handleSubmit}>
+                        <InputWrapper>
+                            <label>Latitude:</label>
+                            <CardInput
+                                type="text"
+                                placeholder={'Latitude'}
+                                name="latitude"
+                                value={formValues.latitude}
+                                onChange={handleChange}
+                                required
+                            />
+                        </InputWrapper>
+                        <InputWrapper>
+                            <label>Longitude:</label>
+                            <CardInput
+                                type="text"
+                                placeholder={'Longitude'}
+                                name="longitude"
+                                value={formValues.longitude}
+                                onChange={handleChange}
+                                required
+                            />
+                        </InputWrapper>
+                        <InputWrapper className="edit">
+                            <label
+                                htmlFor="level"
+                                className="label"
+                            >Level:</label>
+                            <select
+                                id=""
+                                // placeholder={formValues.level}
+                                value={formValues.level}
+                                name='level'
+                                onChange={handleChange}
+                            >
+                                <option></option>
+                                <option value="Easy">Easy</option>
+                                <option value="Moderate">Moderate</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+                        </InputWrapper>
+                        <CardButton
+                            disabled={
+                                !formValues.latitude ||
+                                !formValues.longitude ||
+                                !formValues.level
+                            }
                         >
-                            <option value="easy">Easy</option>
-                            <option value="moderate">Moderate</option>
-                            <option value="hard">Hard</option>
-                        </select>
-                    </ul>
-                    <button
-                        disabled={
-                            !formValues.latitude ||
-                            !formValues.longitude
-                        }
-                    >
-                        Add Cache
-                    </button>
-                </ul>
-            </form>
+                            Add Cache
+                        </CardButton>
+                    </form>
+                </CardOverlay>
+            </CardContainer>
         </div>
     )
 }

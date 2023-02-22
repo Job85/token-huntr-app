@@ -8,7 +8,7 @@ import Register from './pages/Register';
 import Login from './pages/Login'
 import Home from './pages/Home'
 import LocationList from './pages/LocationList';
-import AddLocation from './pages/AddLocation';
+import LocationForm from './pages/AddLocation';
 import EditCache from './pages/EditLocation';
 
 
@@ -65,7 +65,7 @@ const App = () => {
             user={user}
             authenticated={authenticated}
           />} />
-          <Route path='/locations/create/:user_id' element={<AddLocation
+          <Route path='/locations/create/:user_id' element={<LocationForm
             user={user}
             authenticated={authenticated}
           />} />
