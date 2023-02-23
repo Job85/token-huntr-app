@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 import "./PageStyles.css";
+import HillBackground from '../components/Backgrounds/HillsBackground';
 
 const required = value => {
     if (!value) {
@@ -77,79 +78,82 @@ const Register = () => {
     }
 
     return (
-        <CardContainer>
-            <CardOverlay>
-                <CardHeader>Sign Up for Account</CardHeader>
-                <form onSubmit={handleSubmit}>
-                    <InputWrapper className="edit">
-                        <label htmlFor='firstName'>First Name</label>
-                        <CardInput
-                            onChange={handleChange}
-                            type='text'
-                            name='firstName'
-                            placeholder="John"
-                            value={formValues.firstName}
-                            required
-                        />
-                    </InputWrapper>
-                    <InputWrapper className="edit">
-                        <label htmlFor='lastName'>Last Name</label>
-                        <CardInput
-                            onChange={handleChange}
-                            type='text'
-                            name='lastName'
-                            placeholder="Doe"
-                            value={formValues.lastName}
-                            required
-                        />
-                    </InputWrapper>
-                    <InputWrapper className="edit">
-                        <Icon icon={faEnvelope} />
-                        <CardInput
-                            onChange={handleChange}
-                            type="email"
-                            name='email'
-                            placeholder="Email"
-                            value={formValues.email}
-                            validations={[required, validEmail]}
-                        />
-                    </InputWrapper>
-                    <InputWrapper className="edit">
-                        <Icon icon={faLock} />
-                        <CardInput
-                            onChange={handleChange}
-                            type='password'
-                            name='password'
-                            placeholder="Password"
-                            value={formValues.password}
-                            required
-                        />
-                    </InputWrapper>
-                    <InputWrapper className="edit">
-                        <CardInput
-                            onChange={handleChange}
-                            type='password'
-                            name='confirmPassword'
-                            placeholder="Confirm Password"
-                            value={formValues.confirmPassword}
-                            required
-                        />
-                    </InputWrapper>
-                    <CardButton
-                        type='submit'
-                        disabled={
-                            !formValues.firstName ||
-                            !formValues.lastName ||
-                            !formValues.email ||
-                            (!formValues.password &&
-                                formValues.confirmPassword === formValues.password)
-                        }
-                    >
-                        Register
-                    </CardButton>
-                </form>
-            </CardOverlay>
-        </CardContainer>
+        <div>
+            <HillBackground />
+            <CardContainer>
+                <CardOverlay>
+                    <CardHeader>Sign Up for Account</CardHeader>
+                    <form onSubmit={handleSubmit}>
+                        <InputWrapper className="edit">
+                            <label htmlFor='firstName'>First Name</label>
+                            <CardInput
+                                onChange={handleChange}
+                                type='text'
+                                name='firstName'
+                                placeholder="John"
+                                value={formValues.firstName}
+                                required
+                            />
+                        </InputWrapper>
+                        <InputWrapper className="edit">
+                            <label htmlFor='lastName'>Last Name</label>
+                            <CardInput
+                                onChange={handleChange}
+                                type='text'
+                                name='lastName'
+                                placeholder="Doe"
+                                value={formValues.lastName}
+                                required
+                            />
+                        </InputWrapper>
+                        <InputWrapper className="edit">
+                            <Icon icon={faEnvelope} />
+                            <CardInput
+                                onChange={handleChange}
+                                type="email"
+                                name='email'
+                                placeholder="Email"
+                                value={formValues.email}
+                                validations={[required, validEmail]}
+                            />
+                        </InputWrapper>
+                        <InputWrapper className="edit">
+                            <Icon icon={faLock} />
+                            <CardInput
+                                onChange={handleChange}
+                                type='password'
+                                name='password'
+                                placeholder="Password"
+                                value={formValues.password}
+                                required
+                            />
+                        </InputWrapper>
+                        <InputWrapper className="edit">
+                            <CardInput
+                                onChange={handleChange}
+                                type='password'
+                                name='confirmPassword'
+                                placeholder="Confirm Password"
+                                value={formValues.confirmPassword}
+                                required
+                            />
+                        </InputWrapper>
+                        <CardButton
+                            type='submit'
+                            disabled={
+                                !formValues.firstName ||
+                                !formValues.lastName ||
+                                !formValues.email ||
+                                (!formValues.password &&
+                                    formValues.confirmPassword === formValues.password)
+                            }
+                        >
+                            Register
+                        </CardButton>
+                    </form>
+                </CardOverlay>
+            </CardContainer>
+        </div>
     )
 
 }

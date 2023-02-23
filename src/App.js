@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import LocationList from './pages/LocationList';
 import LocationForm from './pages/AddLocation';
 import EditCache from './pages/EditLocation';
+import HillBackground from './components/Backgrounds/HillsBackground';
 
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
       </h1>
       <div>
         <Routes>
+          <Route path='/hills' element={<HillBackground />} />
           <Route path='/' element={<Landing />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login
