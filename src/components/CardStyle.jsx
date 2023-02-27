@@ -4,10 +4,11 @@ import styled, { css } from 'styled-components';
 
 export const CardContainer = styled.div`
     height: 100vh;
-    padding-top: 5rem;
+    /* padding-top: 5rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 10;
 `
@@ -20,8 +21,10 @@ export const CardOverlay = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
     flex-direction: column;
-    background-color: #12343b;
-    color: #e1b382;
+    /* background-color: #12343b; */
+    background-color: #edf4f2;
+    /* color: #e1b382; */
+    color: #31473a;
 `
 
 export const CardHeader = styled.h2`
@@ -63,8 +66,10 @@ export const CardFooter = styled.div`
 `
 
 export const CardButton = styled.button`
-    background: #e1b382;
-    color: #12343b;
+    /* background: #e1b382; */
+    /* color: #12343b; */
+    background: #31473a;
+    color: #edf4f2;
     border-radius: .5rem;
     width: 45%;
     font-weight: 900;

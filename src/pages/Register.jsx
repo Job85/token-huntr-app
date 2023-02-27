@@ -78,9 +78,9 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <HillBackground />
-            <CardContainer>
+        <div id='register'>
+            <HillBackground className='hills' />
+            <CardContainer className='cardContainer'>
                 <CardOverlay>
                     <CardHeader>Sign Up for Account</CardHeader>
                     <form onSubmit={handleSubmit}>

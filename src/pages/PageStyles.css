@@ -31,3 +31,9 @@
 .edit {
     justify-content: end;
 }
+
+#register {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
