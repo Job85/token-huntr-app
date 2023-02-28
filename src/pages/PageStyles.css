@@ -18,9 +18,10 @@
     height: 100vh;
 }
 
-.login {
+#login {
     position: relative;
-    background-color: grey;
+    display: flex;
+    flex-direction: column;
 }
 
 .label {

@@ -3,9 +3,8 @@ import { LogInUser } from '../services/AuthServices';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-// import { Button, CardWapper, CardBody, CardHeader, CardHeading, CardFieldset, CardInput, CardWrapper } from "../components/CompStyles";
 import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
-import { Card } from "@mui/material";
+import HillBackground from "../components/Backgrounds/HillsBackground";
 
 const LogIn = (props) => {
     let navigate = useNavigate()
@@ -34,7 +33,8 @@ const LogIn = (props) => {
 
     return (
 
-        <div className="login">
+        <div id="login">
+            <HillBackground className='hills' />
             <CardContainer>
                 <CardOverlay>
                     <CardHeader>Log In</CardHeader>
