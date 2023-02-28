@@ -9,7 +9,7 @@ const Landing = () => {
         <div id='landing'>
             <HillBackground />
             <section>
-                <h1>Welcome to Token Huntr</h1>
+                <h1 className='welcome'>Welcome to Token Huntr</h1>
                 <h2>Log In or Sign Up for New Adventures</h2>
                 <button onClick={() => navigate('/login')} className='landing-button'>
                     Log In
