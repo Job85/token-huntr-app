@@ -50,9 +50,6 @@ const App = () => {
           handleLogOut={handleLogOut}
         />
       </header>
-      <h1>
-        Token Huntr
-      </h1>
       <div>
         <Routes>
           <Route path='/hills' element={<HillBackground />} />
