@@ -1,6 +1,6 @@
 .body {
     background-attachment: fixed;
-    background-image: url("../assets/explorer-map.jpg");
+    /* background-image: url("../assets/explorer-map.jpg"); */
     background-position: center;
     background-origin: padding-box;
     background-repeat: no-repeat;
