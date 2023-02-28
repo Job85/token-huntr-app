@@ -1,11 +1,13 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import HillBackground from '../components/Backgrounds/HillsBackground';
 
 const Landing = () => {
     let navigate = useNavigate()
 
     return (
-        <div className='lp-background'>
+        <div id='landing'>
+            <HillBackground />
             <section>
                 <h1>Welcome to Token Huntr</h1>
                 <h2>Log In or Sign Up for New Adventures</h2>
