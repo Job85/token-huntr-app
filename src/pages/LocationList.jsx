@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../components/Card';
 import HillBackground from '../components/Backgrounds/HillsBackground';
+import Carousel from '../components/Carousel';
 import './PageStyles.css';
 
 const LocationList = () => {
@@ -9,7 +9,7 @@ const LocationList = () => {
         <div className='body'>
             <HillBackground />
             <h1 className='locations'>GeoCache Locations</h1>
-            <Card />
+            <Carousel />
         </div>
     )
 }
