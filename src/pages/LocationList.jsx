@@ -8,7 +8,7 @@ const LocationList = () => {
     return (
         <div className='body'>
             <HillBackground />
-            <h1 className='locations'>GeoCache Locations</h1>
+            <h1 className='header-1'>GeoCache Locations</h1>
             <Carousel />
         </div>
     )
