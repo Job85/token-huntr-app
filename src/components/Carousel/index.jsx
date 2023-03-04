@@ -34,8 +34,7 @@ const Carousel = () => {
 
 
     return (
-        // <>
-        <div className="body">
+        <div className="carousel-body">
             <div className="carousel-container">
                 {locations.map((cache) => (
                     <div
@@ -88,7 +87,6 @@ const Carousel = () => {
                 ))}
             </div>
         </div>
-        // </>
     )
 }
 
