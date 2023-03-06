@@ -2,6 +2,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+const size = {
+    mobile: "320px",
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "2560px"
+}
+
+export const mobile = (inner) => css`
+    @media (max-width: ${size.mobile}) {
+        ${inner};
+    }
+`
+
 export const CardContainer = styled.div`
     height: 100vh;
     display: flex;
@@ -46,6 +59,11 @@ export const CardInput = styled.input`
     box-sizing: border-box;
     transition: border-bottom-color 0.25s ease-in;
 
+    ${mobile(css`
+        font-size: small;
+        padding: 5px 0 5px 0;
+    `)}
+
     &:focus {
         border-bottom-color: #9fa65a;
         outline: 0;
@@ -70,4 +88,9 @@ export const CardButton = styled.button`
     font-weight: 900;
     font-size: 1em;
     margin: .5rem 0 .5rem 0;
+
+    ${mobile(css`
+        font-size: small;
+        width: inherit;
+    `)}
 `
