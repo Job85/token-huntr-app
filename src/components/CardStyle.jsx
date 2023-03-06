@@ -16,7 +16,7 @@ export const mobile = (inner) => css`
 `
 
 export const CardContainer = styled.div`
-    height: 100vh;
+    height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
