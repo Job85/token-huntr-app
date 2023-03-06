@@ -47,7 +47,7 @@ const Carousel = () => {
                             <span className='location-span'>
                                 <b>Latitude:</b> {cache.latitude}
                             </span>
-                            <span>
+                            <span className='location-span'>
                                 <b>Longitude:</b> {cache.longitude}
                             </span>
                             <span className='location-span'>
