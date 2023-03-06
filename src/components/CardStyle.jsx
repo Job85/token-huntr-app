@@ -25,7 +25,7 @@ export const CardContainer = styled.div`
     z-index: 10;
 
    @media screen and (max-height: 360px){
-    padding-top: 0;
+    padding-top: 1rem;
    }
 `
 
@@ -42,7 +42,11 @@ export const CardOverlay = styled.div`
     color: #31473a;
 
     @media screen and (max-height: 360px){
-    padding: 0;
+    padding: 1rem;
+   }
+
+   @media screen and (max-height: 545px){
+    width: inherit;
    }
 `
 
@@ -51,6 +55,16 @@ export const CardHeader = styled.h2`
 `
 export const Icon = styled(FontAwesomeIcon)`
     padding-right: .2rem;
+`
+
+export const Form = styled.form`
+    display: block;
+    margin-top: 0;
+
+    @media screen and (max-height: 545px){
+    display: flex;
+    flex-direction: column;
+   }
 `
 
 export const InputWrapper = styled.div`
@@ -102,6 +116,11 @@ export const CardButton = styled.button`
     font-weight: 900;
     font-size: 1em;
     margin: .5rem 0 .5rem 0;
+
+    @media screen and (max-height: 545px){
+    width: 30%;
+    margin: 0 auto;
+   }
 
     ${mobile(css`
         font-size: small;

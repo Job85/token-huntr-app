@@ -39,6 +39,11 @@
     flex-direction: column;
 }
 
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .header-1 {
     margin: 0;
     padding-top: 2rem;
@@ -47,5 +52,12 @@
 @media screen and (max-width: 310px) {
     .header-1 {
         font-size: x-large;
+    }
+}
+
+@media screen and (max-height: 545px) {
+    .form-wrapper {
+        display: flex;
+        flex-direction: row;
     }
 }
