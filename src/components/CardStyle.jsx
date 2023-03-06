@@ -23,6 +23,10 @@ export const CardContainer = styled.div`
     padding-top: 2rem;
     position: relative;
     z-index: 10;
+
+   @media screen and (max-height: 360px){
+    padding-top: 0;
+   }
 `
 
 export const CardOverlay = styled.div`
@@ -32,9 +36,14 @@ export const CardOverlay = styled.div`
     border: 2px solid #9fa65a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
+    display: flex;
     flex-direction: column;
     background-color: #edf4f2;
     color: #31473a;
+
+    @media screen and (max-height: 360px){
+    padding: 0;
+   }
 `
 
 export const CardHeader = styled.h2`
