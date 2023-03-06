@@ -20,7 +20,7 @@ export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 2rem;
     position: relative;
     z-index: 10;
 `
@@ -48,6 +48,11 @@ export const InputWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    ${mobile(css`
+        flex-direction: column;
+        align-items: baseline;
+    `)}
 `
 
 export const CardInput = styled.input`
