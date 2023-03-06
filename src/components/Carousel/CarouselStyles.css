@@ -6,7 +6,6 @@
     /* width: 100%; */
     width: auto;
     align-items: center;
-    border: solid red;
 }
 
 .carousel-container {
@@ -16,7 +15,6 @@
     display: flex;
     padding: 2rem;
     flex-direction: column;
-    border: solid black;
 }
 
 .location-card {
