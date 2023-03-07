@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
+import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 import "./PageStyles.css"
 // useLocation, useNavigate
 
@@ -72,55 +72,57 @@ const EditForm = () => {
             <CardContainer>
                 <CardOverlay>
                     <CardHeader>Edit</CardHeader>
-                    <form onSubmit={handleSubmit}>
-                        <InputWrapper className="edit">
-                            <label
-                                htmlFor="latitude"
-                                className="label"
-                            >
-                                Latitude:</label>
-                            <CardInput
-                                value={formValues.latitude}
-                                type="text"
-                                placeholder={formValues.latitude}
-                                name="latitude"
-                                onChange={handleChange}
-                                required
-                            />
-                        </InputWrapper>
-                        <InputWrapper className="edit">
-                            <label
-                                htmlFor="longitude"
-                                className="label"
-                            >Longitude:</label>
-                            <CardInput
-                                value={formValues.longitude}
-                                type="text"
-                                placeholder={formValues.longitude}
-                                name="longitude"
-                                onChange={handleChange}
-                                required
-                            />
-                        </InputWrapper>
-                        <InputWrapper className="edit">
-                            <label
-                                htmlFor="level"
-                                className="label"
-                            >Level:</label>
-                            <select
-                                id=""
-                                placeholder={formValues.level}
-                                value={formValues.level}
-                                name='level'
-                                onChange={handleChange}
-                            >
-                                <option value="Easy">Easy</option>
-                                <option value="Moderate">Moderate</option>
-                                <option value="Hard">Hard</option>
-                            </select>
-                        </InputWrapper>
+                    <Form onSubmit={handleSubmit}>
+                        <div className="form-wrapper">
+                            <InputWrapper className="edit">
+                                <label
+                                    htmlFor="latitude"
+                                    className="label"
+                                >
+                                    Latitude:</label>
+                                <CardInput
+                                    value={formValues.latitude}
+                                    type="text"
+                                    placeholder={formValues.latitude}
+                                    name="latitude"
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </InputWrapper>
+                            <InputWrapper className="edit">
+                                <label
+                                    htmlFor="longitude"
+                                    className="label"
+                                >Longitude:</label>
+                                <CardInput
+                                    value={formValues.longitude}
+                                    type="text"
+                                    placeholder={formValues.longitude}
+                                    name="longitude"
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </InputWrapper>
+                            <InputWrapper className="edit">
+                                <label
+                                    htmlFor="level"
+                                    className="label"
+                                >Level:</label>
+                                <select
+                                    id=""
+                                    placeholder={formValues.level}
+                                    value={formValues.level}
+                                    name='level'
+                                    onChange={handleChange}
+                                >
+                                    <option value="Easy">Easy</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Hard">Hard</option>
+                                </select>
+                            </InputWrapper>
+                        </div>
                         <CardButton>Save</CardButton>
-                    </form>
+                    </Form>
                     <CardButton
                         type="submit"
                         onClick={() => handleDelete(location_id)}

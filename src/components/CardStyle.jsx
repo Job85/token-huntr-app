@@ -31,7 +31,7 @@ export const CardContainer = styled.div`
 
 export const CardOverlay = styled.div`
     border-radius: 2rem;
-    width: 30%;
+    width: inherit;
     padding: 2rem;
     border: 2px solid #9fa65a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -115,7 +115,7 @@ export const CardButton = styled.button`
     width: 45%;
     font-weight: 900;
     font-size: 1em;
-    margin: .5rem 0 .5rem 0;
+    margin: .25rem auto;
 
     @media screen and (max-height: 545px){
     width: 30%;

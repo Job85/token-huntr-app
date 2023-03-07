@@ -51,6 +51,7 @@ const App = () => {
         />
       </header>
       <div>
+        <HillBackground />
         <Routes>
           <Route path='/hills' element={<HillBackground />} />
           <Route path='/' element={<Landing />} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
+import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 import { useNavigate } from 'react-router-dom'
 
 
@@ -46,47 +46,49 @@ const LocationForm = ({ user }) => {
             <CardContainer>
                 <CardOverlay>
                     <CardHeader>Create Cache Location</CardHeader>
-                    <form onSubmit={handleSubmit}>
-                        <InputWrapper>
-                            <label>Latitude:</label>
-                            <CardInput
-                                type="text"
-                                placeholder={'Latitude'}
-                                name="latitude"
-                                value={formValues.latitude}
-                                onChange={handleChange}
-                                required
-                            />
-                        </InputWrapper>
-                        <InputWrapper>
-                            <label>Longitude:</label>
-                            <CardInput
-                                type="text"
-                                placeholder={'Longitude'}
-                                name="longitude"
-                                value={formValues.longitude}
-                                onChange={handleChange}
-                                required
-                            />
-                        </InputWrapper>
-                        <InputWrapper className="edit">
-                            <label
-                                htmlFor="level"
-                                className="label"
-                            >Level:</label>
-                            <select
-                                id=""
-                                // placeholder={formValues.level}
-                                value={formValues.level}
-                                name='level'
-                                onChange={handleChange}
-                            >
-                                <option></option>
-                                <option value="Easy">Easy</option>
-                                <option value="Moderate">Moderate</option>
-                                <option value="Hard">Hard</option>
-                            </select>
-                        </InputWrapper>
+                    <Form onSubmit={handleSubmit}>
+                        <div className='form-wrapper'>
+                            <InputWrapper>
+                                <label>Latitude:</label>
+                                <CardInput
+                                    type="text"
+                                    placeholder={'Latitude'}
+                                    name="latitude"
+                                    value={formValues.latitude}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </InputWrapper>
+                            <InputWrapper>
+                                <label>Longitude:</label>
+                                <CardInput
+                                    type="text"
+                                    placeholder={'Longitude'}
+                                    name="longitude"
+                                    value={formValues.longitude}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </InputWrapper>
+                            <InputWrapper className="edit">
+                                <label
+                                    htmlFor="level"
+                                    className="label"
+                                >Level:</label>
+                                <select
+                                    id=""
+                                    // placeholder={formValues.level}
+                                    value={formValues.level}
+                                    name='level'
+                                    onChange={handleChange}
+                                >
+                                    <option></option>
+                                    <option value="Easy">Easy</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Hard">Hard</option>
+                                </select>
+                            </InputWrapper>
+                        </div>
                         <CardButton
                             disabled={
                                 !formValues.latitude ||
@@ -96,7 +98,7 @@ const LocationForm = ({ user }) => {
                         >
                             Add Cache
                         </CardButton>
-                    </form>
+                    </Form>
                 </CardOverlay>
             </CardContainer>
         </div>
