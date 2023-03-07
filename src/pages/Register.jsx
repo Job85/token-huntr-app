@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 import "./PageStyles.css";
-import HillBackground from '../components/Backgrounds/HillsBackground';
 
 const required = value => {
     if (!value) {
@@ -79,7 +78,6 @@ const Register = () => {
 
     return (
         <div id='register'>
-            <HillBackground className='hills' />
             <CardContainer className='cardContainer'>
                 <CardOverlay>
                     <CardHeader>Sign Up for Account</CardHeader>
