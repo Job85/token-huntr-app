@@ -3,7 +3,7 @@ import { isEmail } from 'validator';
 import { RegisterUser } from '../services/AuthServices';
 import { useNavigate } from 'react-router-dom';
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardButton } from "../components/CardStyle";
+import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 import "./PageStyles.css";
 
 const required = value => {
@@ -124,7 +124,7 @@ const Register = () => {
                                     name='password'
                                     placeholder="Password"
                                     value={formValues.password}
-                                    validations={[required, validPassword]}
+                                    required
                                 />
                             </InputWrapper>
                             <InputWrapper className="edit">
@@ -134,7 +134,7 @@ const Register = () => {
                                     name='confirmPassword'
                                     placeholder="Confirm Password"
                                     value={formValues.confirmPassword}
-                                    validations={[required, validPassword]}
+                                    required
                                 />
                             </InputWrapper>
                         </div>
