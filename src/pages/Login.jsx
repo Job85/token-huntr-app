@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { LogInUser } from '../services/AuthServices';
 import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { CardContainer, CardOverlay, CardHeader, Icon, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 
