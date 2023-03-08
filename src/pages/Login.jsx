@@ -23,7 +23,7 @@ const LogIn = (props) => {
             props.setUser(payload)
             props.toggleAuthenticated(true)
             console.log(payload)
-            navigate('/home')
+            navigate('/locations')
         } catch (error) {
             throw error
         }
