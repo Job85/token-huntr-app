@@ -37,28 +37,30 @@ const LogIn = (props) => {
                 <CardOverlay>
                     <CardHeader>Log In</CardHeader>
                     <form onSubmit={handleLogin}>
-                        <InputWrapper>
-                            <Icon icon={faEnvelope} />
-                            <CardInput
-                                onChange={handleChange}
-                                type='email'
-                                name='email'
-                                placeholder="Email"
-                                value={formValues.email}
-                                required
-                            />
-                        </InputWrapper>
-                        <InputWrapper>
-                            <Icon icon={faLock} />
-                            <CardInput
-                                onChange={handleChange}
-                                type='password'
-                                name='password'
-                                placeholder="Password"
-                                value={formValues.password}
-                                required
-                            />
-                        </InputWrapper>
+                        <div className="form-wrapper">
+                            <InputWrapper>
+                                <Icon icon={faEnvelope} />
+                                <CardInput
+                                    onChange={handleChange}
+                                    type='email'
+                                    name='email'
+                                    placeholder="Email"
+                                    value={formValues.email}
+                                    required
+                                />
+                            </InputWrapper>
+                            <InputWrapper>
+                                <Icon icon={faLock} />
+                                <CardInput
+                                    onChange={handleChange}
+                                    type='password'
+                                    name='password'
+                                    placeholder="Password"
+                                    value={formValues.password}
+                                    required
+                                />
+                            </InputWrapper>
+                        </div>
                         <CardFooter>
                             <CardButton
                                 type="submit"
