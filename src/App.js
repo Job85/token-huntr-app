@@ -14,7 +14,6 @@ import HillBackground from './components/Backgrounds/HillsBackground';
 
 
 const App = () => {
-  console.log(process.env.NODE_ENV, 'Node Environment')
 
   const [authenticated, toggleAuthenticated] = useState(false)
 
