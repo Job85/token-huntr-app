@@ -37,7 +37,7 @@ const LocationForm = ({ user }) => {
             longitude: '',
             level: ''
         })
-        axios.post(`${BASE_URL}/api/location/create_cache/${user_id}`, formValues)
+        axios.post(`${BASE_URL}/location/create_cache/${user_id}`, formValues)
         navigate('/locations');
     }
 
