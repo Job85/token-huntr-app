@@ -20,7 +20,7 @@ const LocationForm = ({ user }) => {
     }
 
     const CreateCache = async () => {
-        let url = `${BASE_URL}/api/location/create_cache/${user_id}`
+        let url = `${BASE_URL}/location/create_cache/${user_id}`
         await axios({
             url,
             method: 'post',
