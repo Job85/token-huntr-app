@@ -59,7 +59,7 @@ const EditForm = () => {
             longitude: '',
             level: ''
         })
-        axios.put(`${BASE_URL}/api/location/update_cache/${location_id}`, formValues)
+        axios.put(`${BASE_URL}/location/update_cache/${location_id}`, formValues)
         navigate('/locations');
     }
 
