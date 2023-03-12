@@ -3,6 +3,7 @@ import axios from 'axios'
 import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
 import { useNavigate } from 'react-router-dom'
 
+export const BASE_URL = process.env.NODE_ENV === 'local' ? 'http://localhost3001/api' : 'https://token-huntr-server.onrender.com/api'
 
 const LocationForm = ({ user }) => {
     const user_id = user.id
@@ -19,8 +20,7 @@ const LocationForm = ({ user }) => {
     }
 
     const CreateCache = async () => {
-        // let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api//location/create_cache/${user_id}` : `https://token-huntr-server.herokuapp.com/api//location/create_cache/${user_id}`
-        let url = process.env.NODE_ENV === `http://localhost:3001/api/location/create_cache/${user_id}`
+        let url = `${BASE_URL}/api/location/create_cache/${user_id}`
         await axios({
             url,
             method: 'post',
@@ -37,7 +37,7 @@ const LocationForm = ({ user }) => {
             longitude: '',
             level: ''
         })
-        axios.post(`http://localhost:3001/api/location/create_cache/${user_id}`, formValues)
+        axios.post(`${BASE_URL}/api/location/create_cache/${user_id}`, formValues)
         navigate('/locations');
     }
 
