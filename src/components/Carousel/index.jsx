@@ -4,6 +4,8 @@ import axios from "axios";
 import Card from "../Card";
 import './CarouselStyles.css';
 
+export const BASE_URL = process.env.NODE_ENV === 'local' ? 'http://localhost3001/api' : 'https://token-huntr-server.onrender.com/api'
+
 const Carousel = () => {
 
     // show location
@@ -12,7 +14,7 @@ const Carousel = () => {
     // API call for locations
     useEffect(() => {
         const GetLocations = async () => {
-            const location = await axios.get(`http://localhost:3001/api/location`)
+            const location = await axios.get(`${BASE_URL}/location`)
             setLocations(location.data)
         }
         GetLocations()
