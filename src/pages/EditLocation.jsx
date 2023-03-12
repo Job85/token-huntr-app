@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { CardContainer, CardOverlay, CardHeader, Icon, Form, InputWrapper, CardInput, CardFooter, CardButton } from "../components/CardStyle";
+import { CardContainer, CardOverlay, CardHeader, Form, InputWrapper, CardInput, CardButton } from "../components/CardStyle";
 import "./PageStyles.css"
-// useLocation, useNavigate
 
 
 export const BASE_URL = process.env.NODE_ENV === 'local' ? 'http://localhost:3001/api' : 'https://token-huntr-server.onrender.com/api'
