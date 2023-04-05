@@ -2,7 +2,6 @@ import Axios from 'axios'
 
 export const BASE_URL = process.env.NODE_ENV === 'local' ? 'http://localhost:3001/api' : 'https://token-huntr-server.onrender.com/api'
 
-console.log(`You're in ${BASE_URL}`)
 const Client = Axios.create({ baseURL: BASE_URL })
 
 Client.interceptors.request.use(

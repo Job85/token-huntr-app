@@ -29,7 +29,6 @@ const LocationForm = ({ user }) => {
     }
 
     const handleSubmit = async (e) => {
-        console.log('button clicked')
         e.preventDefault()
         CreateCache()
         setFormValues({

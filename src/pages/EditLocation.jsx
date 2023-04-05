@@ -50,7 +50,6 @@ const EditForm = () => {
         })
     }
     const handleSubmit = async (e) => {
-        console.log('button clicked')
         e.preventDefault();
         UpdateCache();
         setFormValues({
@@ -63,7 +62,6 @@ const EditForm = () => {
     }
 
     const handleDelete = async (id) => {
-        console.log('button clicked')
         await axios.delete(`${BASE_URL}/api/location/delete_cache/${location_id}`)
         navigate('/locations');
     }

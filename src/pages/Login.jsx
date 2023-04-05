@@ -15,14 +15,12 @@ const LogIn = (props) => {
 
     const handleLogin = async (e) => {
         e.preventDefault()
-        console.log('button clicked')
         try {
             const payload = await LogInUser(formValues)
             setFormValues({ email: '', password: '' })
             localStorage.setItem('user', payload.id)
             props.setUser(payload)
             props.toggleAuthenticated(true)
-            console.log(payload)
             navigate('/locations')
         } catch (error) {
             throw error

@@ -11,7 +11,6 @@ const Card = () => {
             await sleep(1000);
             const location = await axios.get(`http://localhost:3001/api/location`)
             setLocations(location.data)
-            console.log(location.data)
         }
         GetLocations()
             .catch(console.error)
